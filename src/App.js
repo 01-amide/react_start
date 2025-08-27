@@ -18,6 +18,7 @@ import Nav from 'react-bootstrap/Nav';              // Navigation component
 import Navbar from 'react-bootstrap/Navbar';        // Navigation bar component
 import NavDropdown from 'react-bootstrap/NavDropdown'; // Dropdown menu component
 import Card from 'react-bootstrap/Card';            // Card component for content display
+import Form from 'react-bootstrap/Form';  //Form component for comments of viewers
 
 /**
  * Main App Component
@@ -151,7 +152,21 @@ function App() {
                         <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>
-            </div>
+            </div>            
+        </div>
+
+        <div style={{display:'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center', marginTop: '80px'}}>
+            <h2>Tell us which birds you’d like to see more</h2>
+        <Form>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="name@example.com" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Example textarea</Form.Label>
+            <Form.Control as="textarea" rows={3}/>
+        </Form.Group>
+        </Form>
         </div>
         </>
     );
